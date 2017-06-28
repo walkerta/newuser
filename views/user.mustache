@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Validation</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Our first page">
+  <meta name="keywords" content="user.js">
+  <script src="user.js"></script>
+</head>
+{{#user}}
+
+  <body>
+    Hello {{user.name}}
+{{/user}}
+{{^user}}
+
+<form class="userid" action="/login" method="post">
+  <h3>username:<h/h3>
+<input type="text" name="username" placeholder="Enter Username">
+    <h3>Password</h3>
+
+  <input type="password" name="password" placeholder="Enter Password" ./><button type="submit" name="button">Submit</button>
+
+
+</form>
+
+{{/user}}
+
+
+</body>
+</html>
